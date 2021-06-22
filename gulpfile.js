@@ -1,23 +1,25 @@
 /* eslint-disable */
 var gulp = require('gulp'),
   path = require('path'),
+  ngFsUtils = require('@angular/compiler-cli/src/ngtsc/file_system');
   ngc = require('@angular/compiler-cli/src/main').main,
   rollup = require('gulp-rollup'),
   rename = require('gulp-rename'),
   fs = require('fs-extra'),
-  runSequence = require('run-sequence'),
+  runSequence = require('gulp4-run-sequence'),
   inlineResources = require('./tools/gulp/inline-resources');
 
 const rootFolder = path.join(__dirname);
 const srcFolder = path.join(rootFolder, 'src');
 const tmpFolder = path.join(rootFolder, '.tmp');
 const buildFolder = path.join(rootFolder, 'build');
+// console.log('build folder', buildFolder);
 const distFolder = path.join(rootFolder, 'dist');
 
 /**
  * 1. Delete /dist folder
  */
-gulp.task('clean:dist', function () {
+gulp.task('clean:dist', async function () {
 
   // Delete contents but not dist folder to avoid broken npm links
   // when dist directory is removed while npm link references it.
@@ -51,6 +53,7 @@ gulp.task('inline-resources', function () {
  *    As of Angular 5, ngc accepts an array and no longer returns a promise.
  */
 gulp.task('ngc', function () {
+  ngFsUtils.setFileSystem(new ngFsUtils.NodeJSFileSystem());
   ngc(['--project', `${tmpFolder}/tsconfig.es5.json`]);
   return Promise.resolve()
 });
@@ -213,11 +216,11 @@ gulp.task('watch', function () {
   gulp.watch(`${srcFolder}/**/*`, ['compile']);
 });
 
-gulp.task('clean', function (callback) {
+gulp.task('clean', async function (callback) {
   runSequence('clean:dist', 'clean:tmp', 'clean:build', callback);
 });
 
-gulp.task('build', function (callback) {
+gulp.task('build', async function (callback) {
   runSequence('clean', 'compile', callback);
 });
 
@@ -225,7 +228,7 @@ gulp.task('build:watch', function (callback) {
   runSequence('build', 'watch', callback);
 });
 
-gulp.task('default', ['build:watch']);
+gulp.task('default', gulp.series('build:watch', function (){}));
 
 /**
  * Deletes the specified folder

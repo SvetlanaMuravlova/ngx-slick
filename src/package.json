@@ -21,10 +21,10 @@
   "jsnext:main": "ngx-slick.js",
   "typings": "ngx-slick.d.ts",
   "peerDependencies": {
-    "@angular/core": "^6.0.0",
-    "@angular/common": "^6.0.0",
-    "@angular/forms": "^6.0.0",
-    "rxjs": "^6.0.0",
-    "zone.js": "^0.8.4"
+    "@angular/core": "~11.2.14",
+    "@angular/common": "~11.2.14",
+    "@angular/forms": "~11.2.14",
+    "rxjs": "6.5.5",
+    "zone.js": "~0.11.3"
   }
 }
