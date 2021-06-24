@@ -65,13 +65,13 @@
 <title>cluster_SlickModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="103,-70 103,-268 393,-268 393,-70 103,-70"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_SlickModule_exports</title>
-<polygon fill="none" stroke="black" points="111,-208 111,-260 385,-260 385,-208 111,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_SlickModule_declarations</title>
 <polygon fill="none" stroke="black" points="115,-78 115,-130 381,-130 381,-78 115,-78"/>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_SlickModule_exports</title>
+<polygon fill="none" stroke="black" points="111,-208 111,-260 385,-260 385,-208 111,-208"/>
 </g>
 <!-- SlickComponent -->
 <g id="node1" class="node">
@@ -221,8 +221,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/index.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/index.ts:22</a></div>
                 </td>
             </tr>
 
@@ -231,7 +231,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://angular.io/api/core/ModuleWithProviders" target="_blank" >ModuleWithProviders</a></code>
+                        <b>Returns : </b>    <code>ModuleWithProviders&lt;SlickModule&gt;</code>
 
                     </div>
                 </td>
@@ -246,6 +246,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {NgModule, ModuleWithProviders} from &#x27;@angular/core&#x27;;
 import {CommonModule} from &#x27;@angular/common&#x27;;
 import {SlickComponent, SlickItemDirective} from &#x27;./slick.component&#x27;;
+export {SlickComponent} from &#x27;./slick.component&#x27;;
 
 export * from &#x27;./slick.component&#x27;;
 
@@ -263,7 +264,7 @@ export * from &#x27;./slick.component&#x27;;
     ]
 })
 export class SlickModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders&lt;SlickModule&gt; {
         return {
             ngModule: SlickModule,
         };

@@ -68,13 +68,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SlickModule.html" data-type="entity-link">SlickModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' : 'data-target="#xs-components-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' }>
+                                            'data-target="#components-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' : 'data-target="#xs-components-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' :
-                                            'id="xs-components-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' :
+                                            'id="xs-components-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' }>
                                             <li class="link">
                                                 <a href="components/SlickComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">SlickComponent</a>
@@ -83,13 +83,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                     </li>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#directives-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' : 'data-target="#xs-directives-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' }>
+                                        'data-target="#directives-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' : 'data-target="#xs-directives-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' }>
                                         <span class="icon ion-md-code-working"></span>
                                         <span>Directives</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' :
-                                        'id="xs-directives-links-module-SlickModule-0bc44b8754f382cd8bbd0802fe759712"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' :
+                                        'id="xs-directives-links-module-SlickModule-0707af584a242ac359aa41a3117502b8"' }>
                                         <li class="link">
                                             <a href="directives/SlickItemDirective.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules">SlickItemDirective</a>

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "defaultProject": "ngx-slick",
+  "projects": {
+    "ngx-slick": {
+      "projectType": "library",
+      "root": "./src/index.ts",
+      "sourceRoot": "./src/index.ts",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "outputs": [
+            "./dist/ngx-slick/"
+          ],
+          "options": {
+            "tsConfig": "./src/tsconfig.lib.json",
+            "project": "./ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "./src/tsconfig.lib.prod.json"
+            }
+          }
+        }
+      }
+    }
+  }
+}

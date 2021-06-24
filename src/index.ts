@@ -2,6 +2,7 @@ import {NgModule, ModuleWithProviders} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SlickComponent, SlickItemDirective} from './slick.component';
 
+export { SlickComponent } from './slick.component';
 export * from './slick.component';
 
 @NgModule({
